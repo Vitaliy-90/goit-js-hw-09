@@ -18,7 +18,20 @@ function convertMs(ms) {
 
   return { days, hours, minutes, seconds };
 }
-export { convertMs, addLeadingZero };
+
 //
 
-function addLeadingZero(value) {}
+function formatTime(time) {
+  return String(time).padStart(2, '0');
+}
+
+function addLeadingZero({ days, hours, minutes, seconds }) {
+  const formatDay = formatTime(days);
+  const formatHour = formatTime(hours);
+  const formatMinutes = formatTime(minutes);
+  const formatSecond = formatTime(seconds);
+
+  return { formatDay, formatHour, formatMinutes, formatSecond };
+}
+
+export { convertMs, addLeadingZero, formatTime };
