@@ -6,7 +6,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 
 // Імпорт функцій
 
-import { convertMs, addLeadingZero, formatTime } from './functions';
+import { convertMs, addLeadingZero } from './functions';
 
 // Перемінні
 const inputDate = document.querySelector('#datetime-picker');
